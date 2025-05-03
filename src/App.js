@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import CountryPage from './pages/CountryPage';
+import Landing from './pages/Landing';
 import './App.css';
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
         </header>
         <main className="container mx-auto p-4">
           <Routes>
-            <Route path="/" element={<Home />} />
+          <Route path="/" element={<Landing />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/country/:code" element={<CountryPage />} />
           </Routes>
         </main>
